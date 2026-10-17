@@ -1,0 +1,1478 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theater Seat Picker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p id="header">
+        Theater Seat Picker<br /><span style="font-size: 1rem"
+          >Serkan Sarp, 2026</span
+        >
+      </p>
+    </header>
+    <div id="app">
+      <div class="auditorium">
+        <div id="stage">SAHNE</div>
+
+        <div class="seat-row" id="row-A">
+          <button class="seat" type="button" aria-label="A19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A19</span>
+          </button>
+          <button class="seat" type="button" aria-label="A17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A17</span>
+          </button>
+          <button class="seat" type="button" aria-label="A15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A15</span>
+          </button>
+          <button class="seat" type="button" aria-label="A13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A13</span>
+          </button>
+          <button class="seat" type="button" aria-label="A11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A11</span>
+          </button>
+          <button class="seat" type="button" aria-label="A9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="A7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="A5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="A3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A3</span>
+          </button>
+          <button class="seat" type="button" aria-label="A1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A1</span>
+          </button>
+
+          <span class="row-label">A</span>
+
+          <button class="seat" type="button" aria-label="A2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A2</span>
+          </button>
+          <button class="seat" type="button" aria-label="A4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A4</span>
+          </button>
+          <button class="seat" type="button" aria-label="A6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A6</span>
+          </button>
+          <button class="seat" type="button" aria-label="A8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A8</span>
+          </button>
+          <button class="seat" type="button" aria-label="A10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A10</span>
+          </button>
+          <button class="seat" type="button" aria-label="A12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A12</span>
+          </button>
+          <button class="seat" type="button" aria-label="A14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A14</span>
+          </button>
+          <button class="seat" type="button" aria-label="A16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A16</span>
+          </button>
+          <button class="seat" type="button" aria-label="A18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A18</span>
+          </button>
+          <button class="seat" type="button" aria-label="A20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">A20</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-B">
+          <button class="seat" type="button" aria-label="B19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B19</span>
+          </button>
+          <button class="seat" type="button" aria-label="B17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B17</span>
+          </button>
+          <button class="seat" type="button" aria-label="B15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B15</span>
+          </button>
+          <button class="seat" type="button" aria-label="B13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B1</span>
+          </button>
+
+          <span class="row-label">B</span>
+
+          <button class="seat occupied" type="button" aria-label="B2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B2</span>
+          </button>
+          <button class="seat" type="button" aria-label="B4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="B10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B10</span>
+          </button>
+          <button class="seat" type="button" aria-label="B12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B12</span>
+          </button>
+          <button class="seat" type="button" aria-label="B14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B14</span>
+          </button>
+          <button class="seat" type="button" aria-label="B16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B16</span>
+          </button>
+          <button class="seat" type="button" aria-label="B18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B18</span>
+          </button>
+          <button class="seat" type="button" aria-label="B20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">B20</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-C">
+          <button class="seat" type="button" aria-label="C19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C19</span>
+          </button>
+          <button class="seat" type="button" aria-label="C17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C17</span>
+          </button>
+          <button class="seat" type="button" aria-label="C15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C15</span>
+          </button>
+          <button class="seat" type="button" aria-label="C13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C13</span>
+          </button>
+          <button class="seat" type="button" aria-label="C11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C11</span>
+          </button>
+          <button class="seat" type="button" aria-label="C9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C1</span>
+          </button>
+
+          <span class="row-label">C</span>
+
+          <button class="seat" type="button" aria-label="C2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="C10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C10</span>
+          </button>
+          <button class="seat" type="button" aria-label="C12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C12</span>
+          </button>
+          <button class="seat" type="button" aria-label="C14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C14</span>
+          </button>
+          <button class="seat" type="button" aria-label="C16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C16</span>
+          </button>
+          <button class="seat" type="button" aria-label="C18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C18</span>
+          </button>
+          <button class="seat" type="button" aria-label="C20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">C20</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-D" style="margin-bottom: 3rem">
+          <button class="seat" type="button" aria-label="D19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D19</span>
+          </button>
+          <button class="seat" type="button" aria-label="D17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D17</span>
+          </button>
+          <button class="seat" type="button" aria-label="D15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D15</span>
+          </button>
+          <button class="seat" type="button" aria-label="D13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D1</span>
+          </button>
+
+          <span class="row-label">D</span>
+
+          <button class="seat occupied" type="button" aria-label="D2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D10</span>
+          </button>
+          <button class="seat" type="button" aria-label="D12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D12</span>
+          </button>
+          <button class="seat" type="button" aria-label="D14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D14</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="D16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D16</span>
+          </button>
+          <button class="seat" type="button" aria-label="D18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D18</span>
+          </button>
+          <button class="seat" type="button" aria-label="D20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">D20</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-E">
+          <button class="seat" type="button" aria-label="E23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E23</span>
+          </button>
+          <button class="seat" type="button" aria-label="E21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E21</span>
+          </button>
+          <button class="seat" type="button" aria-label="E19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E19</span>
+          </button>
+          <button class="seat" type="button" aria-label="E17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E17</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E15</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E1</span>
+          </button>
+
+          <span class="row-label">E</span>
+
+          <button class="seat occupied" type="button" aria-label="E2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="E10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E10</span>
+          </button>
+          <button class="seat" type="button" aria-label="E12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E12</span>
+          </button>
+          <button class="seat" type="button" aria-label="E14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E14</span>
+          </button>
+          <button class="seat" type="button" aria-label="E16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E16</span>
+          </button>
+          <button class="seat" type="button" aria-label="E18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E18</span>
+          </button>
+          <button class="seat" type="button" aria-label="E20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E20</span>
+          </button>
+          <button class="seat" type="button" aria-label="E22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E22</span>
+          </button>
+          <button class="seat" type="button" aria-label="E24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">E24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-F">
+          <button class="seat" type="button" aria-label="F23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F23</span>
+          </button>
+          <button class="seat" type="button" aria-label="F21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F21</span>
+          </button>
+          <button class="seat" type="button" aria-label="F19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F19</span>
+          </button>
+          <button class="seat" type="button" aria-label="F17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F17</span>
+          </button>
+          <button class="seat" type="button" aria-label="F15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F15</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F9</span>
+          </button>
+          <button class="seat" type="button" aria-label="F7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F3</span>
+          </button>
+          <button class="seat" type="button" aria-label="F1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F1</span>
+          </button>
+
+          <span class="row-label">F</span>
+
+          <button class="seat occupied" type="button" aria-label="F2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F4</span>
+          </button>
+          <button class="seat" type="button" aria-label="F6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F6</span>
+          </button>
+          <button class="seat" type="button" aria-label="F8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F10</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F12</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F14</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="F16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F16</span>
+          </button>
+          <button class="seat" type="button" aria-label="F18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F18</span>
+          </button>
+          <button class="seat" type="button" aria-label="F20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F20</span>
+          </button>
+          <button class="seat" type="button" aria-label="F22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F22</span>
+          </button>
+          <button class="seat" type="button" aria-label="F24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">F24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-G">
+          <button class="seat" type="button" aria-label="G23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G23</span>
+          </button>
+          <button class="seat" type="button" aria-label="G21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G21</span>
+          </button>
+          <button class="seat" type="button" aria-label="G19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G19</span>
+          </button>
+          <button class="seat" type="button" aria-label="G17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G17</span>
+          </button>
+          <button class="seat" type="button" aria-label="G15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G15</span>
+          </button>
+          <button class="seat" type="button" aria-label="G13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G1</span>
+          </button>
+
+          <span class="row-label">G</span>
+
+          <button class="seat occupied" type="button" aria-label="G2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G2</span>
+          </button>
+          <button class="seat" type="button" aria-label="G4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G4</span>
+          </button>
+          <button class="seat" type="button" aria-label="G6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G10</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="G12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G12</span>
+          </button>
+          <button class="seat" type="button" aria-label="G14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G14</span>
+          </button>
+          <button class="seat" type="button" aria-label="G16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G16</span>
+          </button>
+          <button class="seat" type="button" aria-label="G18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G18</span>
+          </button>
+          <button class="seat" type="button" aria-label="G20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G20</span>
+          </button>
+          <button class="seat" type="button" aria-label="G22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G22</span>
+          </button>
+          <button class="seat" type="button" aria-label="G24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">G24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-H">
+          <button class="seat" type="button" aria-label="H23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H23</span>
+          </button>
+          <button class="seat" type="button" aria-label="H21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H21</span>
+          </button>
+          <button class="seat" type="button" aria-label="H19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H19</span>
+          </button>
+          <button class="seat" type="button" aria-label="H17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H17</span>
+          </button>
+          <button class="seat" type="button" aria-label="H15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H15</span>
+          </button>
+          <button class="seat" type="button" aria-label="H13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H13</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H1</span>
+          </button>
+
+          <span class="row-label">H</span>
+
+          <button class="seat occupied" type="button" aria-label="H2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="H10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H10</span>
+          </button>
+          <button class="seat" type="button" aria-label="H12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H12</span>
+          </button>
+          <button class="seat" type="button" aria-label="H14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H14</span>
+          </button>
+          <button class="seat" type="button" aria-label="H16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H16</span>
+          </button>
+          <button class="seat" type="button" aria-label="H18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H18</span>
+          </button>
+          <button class="seat" type="button" aria-label="H20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H20</span>
+          </button>
+          <button class="seat" type="button" aria-label="H22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H22</span>
+          </button>
+          <button class="seat" type="button" aria-label="H24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">H24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-I">
+          <button class="seat" type="button" aria-label="I23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I23</span>
+          </button>
+          <button class="seat" type="button" aria-label="I21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I21</span>
+          </button>
+          <button class="seat" type="button" aria-label="I19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I19</span>
+          </button>
+          <button class="seat" type="button" aria-label="I17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I17</span>
+          </button>
+          <button class="seat" type="button" aria-label="I15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I15</span>
+          </button>
+          <button class="seat" type="button" aria-label="I13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I13</span>
+          </button>
+          <button class="seat" type="button" aria-label="I11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I11</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I1</span>
+          </button>
+
+          <span class="row-label">I</span>
+
+          <button class="seat occupied" type="button" aria-label="I2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I6</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I8</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I10</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="I12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I12</span>
+          </button>
+          <button class="seat" type="button" aria-label="I14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I14</span>
+          </button>
+          <button class="seat" type="button" aria-label="I16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I16</span>
+          </button>
+          <button class="seat" type="button" aria-label="I18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I18</span>
+          </button>
+          <button class="seat" type="button" aria-label="I20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I20</span>
+          </button>
+          <button class="seat" type="button" aria-label="I22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I22</span>
+          </button>
+          <button class="seat" type="button" aria-label="I24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">I24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-J">
+          <button class="seat" type="button" aria-label="J23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J23</span>
+          </button>
+          <button class="seat" type="button" aria-label="J21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J21</span>
+          </button>
+          <button class="seat" type="button" aria-label="J19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J19</span>
+          </button>
+          <button class="seat" type="button" aria-label="J17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J17</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J15</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J13</span>
+          </button>
+          <button class="seat" type="button" aria-label="J11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J11</span>
+          </button>
+          <button class="seat" type="button" aria-label="J9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J7</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J3</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J1</span>
+          </button>
+
+          <span class="row-label">J</span>
+
+          <button class="seat occupied" type="button" aria-label="J2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J2</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J4</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="J6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J6</span>
+          </button>
+          <button class="seat" type="button" aria-label="J8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J8</span>
+          </button>
+          <button class="seat" type="button" aria-label="J10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J10</span>
+          </button>
+          <button class="seat" type="button" aria-label="J12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J12</span>
+          </button>
+          <button class="seat" type="button" aria-label="J14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J14</span>
+          </button>
+          <button class="seat" type="button" aria-label="J16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J16</span>
+          </button>
+          <button class="seat" type="button" aria-label="J18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J18</span>
+          </button>
+          <button class="seat" type="button" aria-label="J20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J20</span>
+          </button>
+          <button class="seat" type="button" aria-label="J22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J22</span>
+          </button>
+          <button class="seat" type="button" aria-label="J24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">J24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-K">
+          <button class="seat" type="button" aria-label="K23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K23</span>
+          </button>
+          <button class="seat" type="button" aria-label="K21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K21</span>
+          </button>
+          <button class="seat" type="button" aria-label="K19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K19</span>
+          </button>
+          <button class="seat" type="button" aria-label="K17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K17</span>
+          </button>
+          <button class="seat" type="button" aria-label="K15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K15</span>
+          </button>
+          <button class="seat" type="button" aria-label="K13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K13</span>
+          </button>
+          <button class="seat" type="button" aria-label="K11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K11</span>
+          </button>
+          <button class="seat" type="button" aria-label="K9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K9</span>
+          </button>
+          <button class="seat" type="button" aria-label="K7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K7</span>
+          </button>
+          <button class="seat" type="button" aria-label="K5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K5</span>
+          </button>
+          <button class="seat" type="button" aria-label="K3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K3</span>
+          </button>
+          <button class="seat" type="button" aria-label="K1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K1</span>
+          </button>
+
+          <span class="row-label">K</span>
+
+          <button class="seat" type="button" aria-label="K2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K2</span>
+          </button>
+          <button class="seat" type="button" aria-label="K4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K4</span>
+          </button>
+          <button class="seat" type="button" aria-label="K6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K6</span>
+          </button>
+          <button class="seat" type="button" aria-label="K8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K8</span>
+          </button>
+          <button class="seat" type="button" aria-label="K10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K10</span>
+          </button>
+          <button class="seat" type="button" aria-label="K12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K12</span>
+          </button>
+          <button class="seat" type="button" aria-label="K14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K14</span>
+          </button>
+          <button class="seat" type="button" aria-label="K16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K16</span>
+          </button>
+          <button class="seat" type="button" aria-label="K18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K18</span>
+          </button>
+          <button class="seat" type="button" aria-label="K20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K20</span>
+          </button>
+          <button class="seat" type="button" aria-label="K22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K22</span>
+          </button>
+          <button class="seat" type="button" aria-label="K24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">K24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-L">
+          <button class="seat" type="button" aria-label="L23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L23</span>
+          </button>
+          <button class="seat" type="button" aria-label="L21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L21</span>
+          </button>
+          <button class="seat" type="button" aria-label="L19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L19</span>
+          </button>
+          <button class="seat" type="button" aria-label="L17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L17</span>
+          </button>
+          <button class="seat" type="button" aria-label="L15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L15</span>
+          </button>
+          <button class="seat" type="button" aria-label="L13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L13</span>
+          </button>
+          <button class="seat" type="button" aria-label="L11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L11</span>
+          </button>
+          <button class="seat" type="button" aria-label="L9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L9</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="L7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L7</span>
+          </button>
+          <button class="seat" type="button" aria-label="L5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L5</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="L3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L3</span>
+          </button>
+          <button class="seat" type="button" aria-label="L1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L1</span>
+          </button>
+
+          <span class="row-label">L</span>
+
+          <button class="seat" type="button" aria-label="L2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L2</span>
+          </button>
+          <button class="seat" type="button" aria-label="L4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L4</span>
+          </button>
+          <button class="seat" type="button" aria-label="L6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L6</span>
+          </button>
+          <button class="seat" type="button" aria-label="L8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L8</span>
+          </button>
+          <button class="seat" type="button" aria-label="L10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L10</span>
+          </button>
+          <button class="seat" type="button" aria-label="L12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L12</span>
+          </button>
+          <button class="seat" type="button" aria-label="L14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L14</span>
+          </button>
+          <button class="seat" type="button" aria-label="L16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L16</span>
+          </button>
+          <button class="seat" type="button" aria-label="L18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L18</span>
+          </button>
+          <button class="seat" type="button" aria-label="L20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L20</span>
+          </button>
+          <button class="seat" type="button" aria-label="L22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L22</span>
+          </button>
+          <button class="seat" type="button" aria-label="L24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">L24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-M">
+          <button class="seat" type="button" aria-label="M23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M23</span>
+          </button>
+          <button class="seat" type="button" aria-label="M21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M21</span>
+          </button>
+          <button class="seat" type="button" aria-label="M19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M19</span>
+          </button>
+          <button class="seat" type="button" aria-label="M17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M17</span>
+          </button>
+          <button class="seat" type="button" aria-label="M15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M15</span>
+          </button>
+          <button class="seat" type="button" aria-label="M13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M13</span>
+          </button>
+          <button class="seat" type="button" aria-label="M11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M11</span>
+          </button>
+          <button class="seat" type="button" aria-label="M9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M9</span>
+          </button>
+          <button class="seat" type="button" aria-label="M7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M7</span>
+          </button>
+          <button class="seat" type="button" aria-label="M5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M5</span>
+          </button>
+          <button class="seat" type="button" aria-label="M3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M3</span>
+          </button>
+          <button class="seat" type="button" aria-label="M1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M1</span>
+          </button>
+
+          <span class="row-label">M</span>
+
+          <button class="seat" type="button" aria-label="M2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M2</span>
+          </button>
+          <button class="seat" type="button" aria-label="M4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M4</span>
+          </button>
+          <button class="seat" type="button" aria-label="M6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M6</span>
+          </button>
+          <button class="seat" type="button" aria-label="M8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M8</span>
+          </button>
+          <button class="seat" type="button" aria-label="M10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M10</span>
+          </button>
+          <button class="seat" type="button" aria-label="M12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M12</span>
+          </button>
+          <button class="seat" type="button" aria-label="M14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M14</span>
+          </button>
+          <button class="seat" type="button" aria-label="M16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M16</span>
+          </button>
+          <button class="seat" type="button" aria-label="M18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M18</span>
+          </button>
+          <button class="seat" type="button" aria-label="M20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M20</span>
+          </button>
+          <button class="seat" type="button" aria-label="M22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M22</span>
+          </button>
+          <button class="seat" type="button" aria-label="M24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">M24</span>
+          </button>
+        </div>
+
+        <div class="seat-row" id="row-N">
+          <button class="seat" type="button" aria-label="N23">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N23</span>
+          </button>
+          <button class="seat" type="button" aria-label="N21">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N21</span>
+          </button>
+          <button class="seat" type="button" aria-label="N19">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N19</span>
+          </button>
+          <button class="seat" type="button" aria-label="N17">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N17</span>
+          </button>
+          <button class="seat" type="button" aria-label="N15">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N15</span>
+          </button>
+          <button class="seat" type="button" aria-label="N13">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N13</span>
+          </button>
+          <button class="seat" type="button" aria-label="N11">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N11</span>
+          </button>
+          <button class="seat" type="button" aria-label="N9">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N9</span>
+          </button>
+          <button class="seat" type="button" aria-label="N7">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N7</span>
+          </button>
+          <button class="seat" type="button" aria-label="N5">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N5</span>
+          </button>
+          <button class="seat" type="button" aria-label="N3">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N3</span>
+          </button>
+          <button class="seat" type="button" aria-label="N1">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N1</span>
+          </button>
+
+          <span class="row-label">N</span>
+
+          <button class="seat" type="button" aria-label="N2">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N2</span>
+          </button>
+          <button class="seat" type="button" aria-label="N4">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N4</span>
+          </button>
+          <button class="seat" type="button" aria-label="N6">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N6</span>
+          </button>
+          <button class="seat" type="button" aria-label="N8">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N8</span>
+          </button>
+          <button class="seat" type="button" aria-label="N10">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N10</span>
+          </button>
+          <button class="seat" type="button" aria-label="N12">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N12</span>
+          </button>
+          <button class="seat" type="button" aria-label="N14">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N14</span>
+          </button>
+          <button class="seat" type="button" aria-label="N16">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N16</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="N18">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N18</span>
+          </button>
+          <button class="seat occupied" type="button" aria-label="N20">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N20</span>
+          </button>
+          <button class="seat" type="button" aria-label="N22">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N22</span>
+          </button>
+          <button class="seat" type="button" aria-label="N24">
+            <i class="fa-solid fa-couch seat-icon"></i>
+            <span class="seat-number">N24</span>
+          </button>
+        </div>
+
+        <div id="oddEven">
+          <div id="odd">TEKLER</div>
+          <div id="even">ÇİFTLER</div>
+        </div>
+      </div>
+
+      <div id="legend">
+        <span class="legend-item">
+          <i class="fa-solid fa-couch legend-icon" aria-hidden="true"></i> Boş
+        </span>
+        <span class="legend-item">
+          <i
+            class="fa-solid fa-couch legend-icon legend-selected"
+            aria-hidden="true"
+          ></i>
+          Seçili
+        </span>
+        <span class="legend-item">
+          <i
+            class="fa-solid fa-couch legend-icon legend-occupied"
+            aria-hidden="true"
+          ></i>
+          Dolu
+        </span>
+      </div>
+
+      <div id="summary" aria-live="polite">
+        <span class="label">Ön Sıralar (A–D):</span>
+        <span class="value">₺ <span id="feeFront">0.00</span></span>
+
+        <span class="label">Arka Sıralar (E–N):</span>
+        <span class="value">₺ <span id="feeBack">0.00</span></span>
+
+        <span class="label">Seçilen Koltuklar:</span>
+        <span class="value" id="selectedList">Henüz seçim yok</span>
+
+        <span class="label">Adet:</span>
+        <span class="value" id="selectedCount">0</span>
+
+        <span class="label">Toplam Ücret:</span>
+        <span class="value">₺ <span id="totalPrice">0.00</span></span>
+
+        <button type="button" id="clearSeats" class="clear-btn">
+          Temizle!
+        </button>
+        <button type="button" id="buySeats" class="buy-btn">Satın al</button>
+      </div>
+      <p id="seatLimitMsg" class="limit-msg" role="status" hidden>
+        En fazla 8 koltuk seçebilirsiniz.
+      </p>
+    </div>
+
+    <hr width="50%" />
+    <footer>
+      <p class="footer">
+        <b>EN: </b>A theater seat selection app. Pick seats on an interactive
+        seating chart, with different prices for front and back rows and a live
+        summary of your selected seats and total cost. Selections are limited to
+        8 seats, and pressing "Satın al" saves them in the browser so they are
+        restored on your next visit. Built with HTML, CSS and vanilla
+        JavaScript, with keyboard-friendly buttons and reduced-motion support.
+      </p>
+
+      <p>
+        <small
+          >Developed with the assistance of AI (Claude), under my own direction
+          and review.</small
+        >
+      </p>
+      <hr style="height: 1px" />
+      <p class="footer">
+        <b>TR: </b>Tiyatro koltuğu seçme uygulamasıdır. Etkileşimli salon planı
+        üzerinden koltuk seçilir. Ön ve arka sıralar farklı fiyatlandırılır.
+        Seçilen koltuklar ve toplam ücret anlık olarak gösterilir. En fazla 8
+        koltuk seçilebilir. "Satın al" ile yapılan seçim tarayıcıda saklanır ve
+        sayfa yeniden açıldığında geri gelir. HTML, CSS ve vanilla JavaScript
+        ile yazılmıştır. Klavye ile kullanıma uygundur ve hareketi azaltma
+        tercihini destekler.
+      </p>
+      <p>
+        <small
+          >Yapay zeka (Claude) yardımıyla, kendi yönlendirmem ve kontrolümle
+          geliştirilmiştir.</small
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

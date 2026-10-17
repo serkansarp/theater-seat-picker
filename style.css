@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  max-width: 550px;
+  min-width: 250px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+#app {
+  text-align: center;
+}
+
+#stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 70rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 1px solid black;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2rem;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: center;
+  border: 0px solid black;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+
+.seat {
+  position: relative; /* numarayı bu kutuya göre konumlayacağız */
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.seat-icon {
+  color: transparent;
+  -webkit-text-stroke: 1px crimson;
+  transition:
+    color 0.25s ease,
+    -webkit-text-stroke-color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.seat-number {
+  position: absolute;
+  inset: 0; /* simgenin tamamını kaplar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 0.6rem sans-serif;
+  color: darkred;
+  pointer-events: none; /* tıklamalar düğmeye geçsin */
+  transform: translateY(-0.3rem); /* yazıyı 3px yukarı çeker */
+  transition: color 0.25s ease;
+}
+
+.seat:hover .seat-icon {
+  -webkit-text-stroke-color: crimson;
+  transform: scale(1.1);
+}
+.seat:active .seat-icon {
+  transform: scale(0.95);
+}
+
+.seat:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.seat:disabled:hover .seat-icon {
+  transform: none; /* hover büyütmesi kilitli koltukta çalışmasın */
+}
+
+/* seçili: içi dolar, numara beyaz olur */
+.seat.selected .seat-icon {
+  color: crimson;
+}
+.seat.selected .seat-number {
+  color: white;
+}
+
+/* dolu */
+.seat.occupied {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.seat.occupied .seat-icon {
+  color: #999;
+  -webkit-text-stroke-color: #999;
+}
+.seat.occupied .seat-number {
+  color: white;
+}
+
+.row-label {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0rem 1.5rem;
+}
+
+#oddEven {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto 0.2rem;
+  justify-content: space-around;
+}
+
+#odd,
+#even {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+#legend {
+  border: 1px solid black;
+  padding: 0.2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-icon {
+  font-size: 1.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px crimson;
+}
+.legend-selected {
+  color: crimson;
+}
+.legend-occupied {
+  color: #999;
+  -webkit-text-stroke-color: #999;
+}
+
+#summary {
+  display: grid;
+  grid-template-columns: auto 22rem; /* sol: etiketler, sağ: değerler (en fazla 14rem, sonra alt satıra geçer) */
+  column-gap: 0.5rem;
+  row-gap: 0.3rem;
+  width: fit-content;
+  margin: 1.5rem auto 0; /* sayfada ortalar */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+#summary .label {
+  text-align: right; /* ":" işaretleri hep aynı hizada biter */
+  font-weight: 600;
+}
+
+#summary .value {
+  text-align: left;
+}
+
+#summary .clear-btn,
+#summary .buy-btn {
+  grid-column: 2;
+  justify-self: start;
+  align-self: start;
+  width: 10rem; /* ikisi de aynı genişlikte */
+  text-align: center;
+}
+
+.clear-btn {
+  background: transparent; /* şeffaf: arkadaki sayfa rengi görünür */
+  border: 1px solid crimson;
+  padding: 0.1rem;
+  font: inherit;
+  color: crimson;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  color: darkred;
+}
+.clear-btn:focus-visible {
+  outline: 2px solid crimson;
+  outline-offset: 2px;
+}
+
+.buy-btn {
+  background: green;
+  border: 1px solid black;
+  padding: 0.3rem 0.7rem;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background: darkgreen;
+}
+
+.buy-btn:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #777;
+  cursor: not-allowed;
+}
+.buy-btn:disabled:hover {
+  background: #ccc;
+}
+
+.limit-msg {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  color: crimson;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+/* ---------- ADIM 1: taban (720px ve üstü) ---------- */
+:root {
+  --seat-size: 1.2rem;
+  --seat-gap: calc(var(--seat-size) * 0.2);
+}
+
+body {
+  min-width: 720px;
+}
+
+#app {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* alt alta dizer */
+  align-items: center; /* sahne, salon ve özeti yatayda ortalar */
+}
+
+.auditorium {
+  width: fit-content;
+}
+
+.seat {
+  font-size: var(--seat-size);
+  transition: opacity 0.25s ease;
+}
+.seat-icon {
+  font-size: 1em;
+  display: block;
+  line-height: 1;
+}
+.seat-number {
+  font-size: max(0.5rem, 0.3em); /* 8px'in altına inmesin */
+  transform: translateY(calc(var(--seat-size) * -0.15));
+}
+
+.seat-row {
+  gap: var(--seat-gap);
+}
+.aisle {
+  width: calc(var(--seat-size) * 1.5);
+}
+.row-label {
+  min-width: 1.5rem;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+
+/* ---------- ADIM 2: 896px ve üstü ---------- */
+@media (min-width: 56em) {
+  :root {
+    --seat-size: 1.5rem;
+  }
+  .row-label {
+    margin: 0 0.75rem;
+  }
+}
+
+/* ---------- ADIM 3: 1280px ve üstü ---------- 
+@media (min-width: 80em) {
+  #app {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .auditorium {
+    flex-shrink: 0;
+  }
+  #summary {
+    position: sticky;
+    top: 1rem;
+    margin: 0;
+  }
+}
+*/
+
+/* ---------- ADIM 4: 1600px ve üstü ---------- */
+@media (min-width: 100em) {
+  :root {
+    --seat-size: 2rem;
+  }
+  #app {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+}
+
+/* Hareket hassasiyeti olanlar için OS ayarlarını kullan */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+  .seat:hover .seat-icon,
+  .seat:active .seat-icon {
+    transform: none;
+  }
+}
